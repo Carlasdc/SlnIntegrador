@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ayudantes\UtilidadesFecha.cs" />
     <Compile Include="ClaseBase\Individuo.cs" />
     <Compile Include="ClasesDerivadas\Director.cs" />
     <Compile Include="ClasesDerivadas\Enfermero.cs" />

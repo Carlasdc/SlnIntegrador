@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 using Entidades;
 namespace Negocio
 {
-    public class AdmHabitacion
+    public static class AdmHabitacion
     {
+        /// <summary>
+        /// Se modificó a static. Tarea 6
+        /// </summary>
 
-        List<Habitacion> habitaciones;
-        public List<Habitacion> Listar()
+        static List<Habitacion> habitaciones;
+        public static List<Habitacion> Listar()
         {
             habitaciones = new List<Habitacion>();
             habitaciones.Add(new Habitacion( 0, "10" ,"ocupado"));
@@ -20,23 +23,23 @@ namespace Negocio
             habitaciones.Add(new Habitacion( 4, "15", "vacio" ));
             return habitaciones;
         }
-        public List<Habitacion> Listar(string Estado)
+        public static List<Habitacion> Listar(string Estado)
         {
             //TODO Falta programar el método Listar
             return null;
         }
-        public int Insertar(Habitacion habitaciones)
+        public static int Insertar(Habitacion habitaciones)
         {
             //TODO Falta programar el método Insertar
             return 0;
         }
 
-        public int Eliminar(int ID)
+        public static int Eliminar(int ID)
         {
             //TODO Falta programar el método Eliminar
             return 0;
         }
-        public List<Habitacion> TraerUno(string numero)
+        public static List<Habitacion> TraerUno(string numero)
         {
             //TODO Falta programar el método TraerUno
             return null;
