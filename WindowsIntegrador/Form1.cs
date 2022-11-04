@@ -15,17 +15,21 @@ namespace WindowsIntegrador
 {
     public partial class Form1 : Form
     {
+        AdmMedico admMedico;
+        AdmPaciente admPaciente;
+        AdmHabitacion admHabitacion;
+
         public Form1()
         {
             InitializeComponent();
+            this.admMedico = new AdmMedico();
+            this.admMedico.Listar();
+            this.admPaciente = new AdmPaciente();
+            this.admHabitacion = new AdmHabitacion();
         }
-
-        AdmMedico admMedico = new AdmMedico();
-        AdmPaciente admPaciente = new AdmPaciente();
-        AdmHabitacion admHabitacion = new AdmHabitacion();
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            gridInfo.DataSource = admMedico.Listar();  
+            gridInfo.DataSource = admMedico.medicos;  
         }
 
         private void btnMostrarP_Click(object sender, EventArgs e)
@@ -35,9 +39,10 @@ namespace WindowsIntegrador
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach (Medico medicos in admMedico.Listar())
+           
+            foreach (Medico medico in admMedico.Listar("medico clinico"))
             {
-                listMedicos.Items.Add("Nombre: "+ medicos.Nombre + " " + medicos.Apellido);
+                listMedicos.Items.Add("Nombre: "+ medico.Nombre + " " + medico.Apellido);
             }
             foreach (Habitacion habitacion in admHabitacion.Listar())
             {

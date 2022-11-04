@@ -7,34 +7,37 @@ using System.Threading.Tasks;
 using Entidades.ClasesDerivadas;
 namespace Datos
 {
-    public class DacMedico
+    public static class DacMedico
     {
-        List<Medico> medicos;
+        /// <summary>
+        /// Se cambio a estado static como segunda fase del ejercicio
+        /// </summary>
+        static List<Medico> medicos;
 
-        public List<Medico> Select()
+        public static List<Medico> Select()
         {
             //TODO Falta programar el método Select
             return null;
         }
-        public List<Medico> Select (string especialidad)
+        public static List<Medico> Select (string especialidad)
         {
             //TODO Falta programar el método Select
             return null;
         }
 
-        public int Insert(Medico medicos)
+        public static int Insert(Medico medicos)
         {
             //TODO Falta programar el método Insert
             return 0;
         }
 
-        public int Eliminar(int ID)
+        public static int Eliminar(int ID)
         {
             //TODO Falta programar el método Eliminar
             return 0;
         }
 
-        public Medico SelectById(int ID)
+        public static Medico SelectById(int ID)
         {
             //TODO Falta programar el método SelectById
             return null;
